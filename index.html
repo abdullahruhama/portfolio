@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo"></div>
+    
+    <!-- Mobile Hamburger Button -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu" id="navMenu">
+      <a href="#about">/ about me</a>
+      <a href="#experience">/ experience</a>
+      <a href="#project">/ projects</a>
+      <a href="#contact">/ contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="greeting">
+        <span id="typewriter-text"> </span><span class="beaming-cursor">|</span>
+      </div>
+      <p class="tagline">
+        Software Engineer
+      </p>
+      
+      <!-- Minimalist Contact Link -->
+      <a href="mailto:your.email@example.com" class="minimal-link">
+        contact &rarr;
+      </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <h2 class="section-title">/ about me</h2>
+      <div class="about-content">
+        <p> 
+          A dedicated Software Engineer with practical experience in systems logic and website administration eager to apply strong problem solving skills and attention to detail, highly adaptable and technically fluent in learning new software systems.
+        </p>
+        <br>
+        <p>Here are some technologies I have been working with:</p>
+        <ul class="tech-list">
+          <li>JavaScript (ES6+) & TypeScript</li>
+          <li>HTML5 & (S)CSS</li>
+          <li>Angular</li>
+          <li>C# / ASP.NET Core / EF Core</li>
+          <li>RESTful APIs</li>
+          <li>SQL Server</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience Section (Single Layout) -->
+    <section class="section" id="experience">
+      <h2 class="section-title">/ experience</h2>
+      
+      <div class="tab-panel active">
+        <h3>Software Engineer Intern <span class="accent-text">@ Devory Tech</span></h3>
+        <p class="duration">SPRING 2026 - JUN 2026</p>
+        <ul>
+          <li>Developed and integrated full-stack features for a home service platform.</li>
+          <li>Engineered interactive UI components and collaborated on backend API routing and database operations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Project Section-->
+     <section class="section" id="project">
+      <h2 class="section-title">/ projects</h2>
+      
+      <div class="tab-panel active">
+
+        <h3> Full Stack Management System <span class="accent-text">@ Internship</span></h3>
+        <p class="duration">Tech used:</p>
+        <ul>
+          <li>C#.</li>
+          <li>EF core</li>
+          <li>ASP.Net Core</li>
+          <li>SQL server</li>
+        </ul>
+
+        <br/>
+
+        <h3>Ai Model - Prediction System <span class="accent-text">@ Final Year Project</span></h3>
+        <p class="duration">Tech used:</p>
+        <ul>
+          <li>Python.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+
+  --font-mono: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--navy);
+  color: var(--light-slate);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  padding: 0 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Typography & Links */
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.accent-text {
+  color: var(--green);
+}
+
+.section-title {
+  color: var(--lightest-slate);
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.logo {
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--green);
+}
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: var(--light-navy);
+  padding: 1.5rem;
+  border-radius: 6px;
+  gap: 1rem;
+  width: 220px;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  z-index: 10;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-menu a {
+  color: var(--lightest-slate);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+}
+
+.nav-menu a:hover {
+  color: var(--green);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero .greeting {
+  display: flex;
+  align-items: center;
+  font-size: 4.2rem;
+  color: var(--lightest-slate);
+  font-weight: bold;
+  min-height: 50px; /* Prevents the section from jumping while typing */
+}
+
+.beaming-cursor {
+  color: var(--green);
+  font-family: var(--font-mono);
+  margin-left: 6px;
+  animation: beam 1.2s infinite;
+}
+
+/* Keyframes for the glowing/blinking cursor effect */
+@keyframes beam {
+  0%, 100% { 
+    opacity: 1; 
+    text-shadow: 0 0 12px rgba(100, 255, 218, 0.8); 
+  }
+  50% { 
+    opacity: 0; 
+    text-shadow: none; 
+  }
+}
+
+.hero .tagline {
+  margin: 1.2rem 0 2rem 0;
+  max-width: 520px;
+  color: var(--slate);
+  font-size: 2.05rem;
+  
+}
+
+/* Buttons */
+/* Minimal Links */
+.minimal-link {
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  margin-top: 1rem;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+/* The animated underline effect */
+.minimal-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--green);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.minimal-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* General Sections */
+.section {
+  padding: 3.5rem 0;
+}
+
+/* About Tech List */
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0.6rem 1rem;
+  margin-top: 1rem;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.tech-list li::before {
+  content: "▷ ";
+  color: var(--green);
+}
+
+/* Experience Tab Layout */
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tab-header {
+  display: flex;
+  border-bottom: 2px solid var(--lightest-navy);
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  color: var(--green);
+  border-bottom-color: var(--green);
+  background-color: var(--light-navy);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel h3 {
+  color: var(--lightest-slate);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.tab-panel .duration {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--slate);
+  margin: 0.4rem 0 1rem 0;
+}
+
+.tab-panel ul {
+  list-style: none;
+}
+
+.tab-panel li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--slate);
+}
+
+.tab-panel li::before {
+  content: "▷";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+}
+
+/* Desktop View Layout */
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    width: auto;
+    gap: 2rem;
+  }
+
+  .tab-container {
+    flex-direction: row;
+  }
+
+  .tab-header {
+    flex-direction: column;
+    border-bottom: none;
+    border-left: 2px solid var(--lightest-navy);
+  }
+
+  .tab-btn {
+    border-bottom: none;
+    border-left: 2px solid transparent;
+    margin-bottom: 0;
+    margin-left: -2px;
+    text-align: left;
+  }
+
+  .tab-btn.active {
+    border-bottom-color: transparent;
+    border-left-color: var(--green);
+  }
+}
