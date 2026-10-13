@@ -1,117 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="logo"></div>
-    
-    <!-- Mobile Hamburger Button -->
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="nav-menu" id="navMenu">
-      <a href="#about">/ about me</a>
-      <a href="#experience">/ experience</a>
-      <a href="#project">/ projects</a>
-      <a href="#contact">/ contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div class="greeting">
-        <span id="typewriter-text"> </span><span class="beaming-cursor">|</span>
-      </div>
-      <p class="tagline">
-        Software Engineer
-      </p>
-      
-      <!-- Minimalist Contact Link -->
-      <a href="mailto:abdullaruhama8@example.com" class="minimal-link">
-        contact &rarr;
-      </a>
-    </section>
-
-    <!-- About Section -->
-    <section class="section" id="about">
-      <h2 class="section-title">/ about me</h2>
-      <div class="about-content">
-        <p> 
-          A dedicated Software Engineer with practical experience in systems logic and website administration eager to apply strong problem solving skills and attention to detail, highly adaptable and technically fluent in learning new software systems.
-        </p>
-        <br>
-        <p>Here are some technologies I have been working with:</p>
-        <ul class="tech-list">
-          <li>JavaScript (ES6+) & TypeScript</li>
-          <li>HTML5 & (S)CSS</li>
-          <li>Angular</li>
-          <li>C# / ASP.NET Core / EF Core</li>
-          <li>RESTful APIs</li>
-          <li>SQL Server</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Experience Section (Single Layout) -->
-    <section class="section" id="experience">
-      <h2 class="section-title">/ experience</h2>
-      
-      <div class="tab-panel active">
-        <h3>Jr Software Engineer <span class="accent-text">@ Devory Tech</span></h3>
-        <p class="duration">SPRING 2026 - JUN 2026</p>
-        <ul>
-          <li>Developed and integrated full-stack features for a home service platform. Engineered interactive UI components and collaborated 
-            on backend API routing and database operations.
-          </li>
-          
-        </ul>
-      </div>
-    </section>
-
-    <!-- Project Section-->
+<!-- Project Section-->
      <section class="section" id="project">
       <h2 class="section-title">/ projects</h2>
       
       <div class="tab-panel active">
 
-        <h3> 1.Full Stack Project - "InterPortal"  <span class="accent-text"></span></h3>
-        <p class="duration"><h5>Tech used:</h5></p>
+        <h3>1. Full Stack Project - "InterPortal" <span class="accent-text"></span></h3>
+        <h5>Tech used:</h5>
         <ul>
-          <h4> BackEnd & Architecture</h4>
+          <h4>BackEnd & Architecture</h4>
           <li>Framework: C#, ASP.NET Core 8 Web API</li>
-           <li>Database: Microsoft SQL Server</li>
-           <li>ORM: Entity Framework Core (EF Core) with Code-First Migrations</li>
-           <li>Design Patterns: RESTful API Architecture, Dependency Injection</li>
+          <li>Database: Microsoft SQL Server</li>
+          <li>ORM: Entity Framework Core (EF Core) with Code-First Migrations</li>
+          <li>Design Patterns: RESTful API Architecture, Dependency Injection</li>
           
-           <h4>FrontEnd & UI </h4>
+          <h4>FrontEnd & UI</h4>
           <li>Framework: Angular (Standalone Components architecture)</li>
-           <li>Language: TypeScript, HTML5</li>
-           <li>Styling: Tailwind CSS</li>
-           <li>Libraries: jsPDF and jspdf-autotable (for client-side document generation)</li>
+          <li>Language: TypeScript, HTML5</li>
+          <li>Styling: Tailwind CSS</li>
+          <li>Libraries: jsPDF and jspdf-autotable (for client-side document generation)</li>
           <li>State Management: Reactive forms, RxJS Observables, Component-level state tracking</li>
 
           <h4>Technical Achievements:</h4>
           <li>Full-Stack Architecture: Engineered a scalable RESTful API using ASP.NET Core and Entity Framework Core to drive a 9-module Angular frontend built with Standalone Components.</li>
           <li>Database Design: Modeled a highly relational SQL Server database using Code-First migrations to seamlessly manage diverse corporate data streams, ranging from IT helpdesk tickets to HR performance evaluations.</li>
-          <li>> Role-Based Access Control (RBAC): Implemented dynamic state management to securely isolate executive data, ensuring reporting dashboards and management actions are restricted to administrative personnel.</li>
+          <li>Role-Based Access Control (RBAC): Implemented dynamic state management to securely isolate executive data, ensuring reporting dashboards and management actions are restricted to administrative personnel.</li>
           <li>Client-Side Document Generation: Integrated jsPDF and jspdf-autotable to aggregate live database metrics into formatted, printable executive reports directly in the browser, eliminating server-side rendering overhead.</li>
         </ul>
           
         <br/>
 
-        <h3> AI Powered - Dialect Translator <span class="accent-text"></span></h3>
-        <p class="duration"><h5>Tech used:</h5></p>
+        <h3>2. AI-Powered - Dialect Translator <span class="accent-text"></span></h3>
+        <h5>Tech used:</h5>
         <ul>
           <li>ASP.NET Core (C#)</li>
           <li>Vanilla JavaScript</li>
@@ -120,37 +39,30 @@
           <li>GitHub Actions</li>
 
           <h4>Technical Achievements:</h4>
-          <li>Architecture: Built a mobile-first JavaScript frontend that securely consumes a custom C# ASP.NET Core Web
-            API.</li>
-          <li>AI Integration: Engineered backend server prompts using the Google Gemini API to process and return
-            accurate, localized dialect translations and phonetics.</li>
-          <li>> Cloud & Automation: Deployed the backend to Microsoft Azure, utilizing GitHub Actions to establish a
-            fully automated CI/CD pipeline.</li>
-          <li>Security: Hardened the API by implementing strict CORS policies and securely managing AI keys within Azure
-            Environment Variables.</li>
+          <li>Architecture: Built a mobile-first JavaScript frontend that securely consumes a custom C# ASP.NET Core Web API.</li>
+          <li>AI Integration: Engineered backend server prompts using the Google Gemini API to process and return accurate, localized dialect translations and phonetics.</li>
+          <li>Cloud & Automation: Deployed the backend to Microsoft Azure, utilizing GitHub Actions to establish a fully automated CI/CD pipeline.</li>
+          <li>Security: Hardened the API by implementing strict CORS policies and securely managing AI keys within Azure Environment Variables.</li>
         </ul>
 
         <br/>
 
-        <h3> Machine Learning- Prediction System <span class="accent-text"></span></h3>
-        <p class="duration"><h5>Tech used:</h5></p>
+        <h3>3. Machine Learning - Laptop Price Prediction System <span class="accent-text"></span></h3>
+        <h5>Tech used:</h5>
         <ul>
-          <li>Python.</li>
+          <li>Python</li>
           <li>Data Manipulation & Analytics: pandas, numpy</li>
-          <li>Machine Learning & Modeling: Scikit-learn, XGBoost / LightGBM,etc, TensorFlow / PyTorch</li>
+          <li>Machine Learning & Modeling: Scikit-learn, XGBoost / LightGBM, TensorFlow / PyTorch</li>
           <li>Deployment & API: Flask / FastAPI, Streamlit</li>
           
+          <h4>Technical Achievements:</h4>
+          <li>Data Engineering: Constructed a robust data pipeline using pandas and numpy to clean, normalize, and extract key hardware features from historical laptop datasets.</li>
+          <li>Model Development: Trained and optimized machine learning models leveraging Scikit-learn and XGBoost to accurately forecast laptop prices based on diverse system specifications.</li>
+          <li>Advanced Analytics: Utilized deep learning frameworks (TensorFlow/PyTorch) to capture complex, non-linear relationships and hardware patterns in pricing data.</li>
+          <li>Web Deployment: Developed and deployed an interactive web interface via Streamlit and FastAPI, enabling users to input specifications and generate real-time price predictions.</li>
         </ul>
 
-         <br/>
-
-
+        <br/>
                 
       </div>
     </section>
-
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
