@@ -1,24 +1,22 @@
 :root {
-  /* Oceanic Blue Camo Palette */
-  --camo-obsidian: #060d18;      /* Deep black-navy background */
-  --camo-navy: #0b1d3a;          /* Dark midnight blue for cards/menus */
-  --camo-royal: #153c78;         /* Rich mid-blue for borders/highlights */
-  --camo-sky: #68a2d8;           /* Sky blue accent */
-  --camo-ice: #b8d8f8;           /* Light ice-blue tint */
+  /* Exact 4-Color Palette Sampled from the Camo Image */
+  --camo-black: #080e1a;         /* Deepest black-navy patches */
+  --camo-royal: #1a4380;         /* Primary rich royal blue */
+  --camo-royal-dark: #102a52;    /* Mid-tone navy blue */
+  --camo-sky: #7ca9d6;           /* Light powder/sky blue patches */
+  --camo-white: #f2f6fb;         /* Crisp white camo streaks */
 
   /* Typography */
-  --white: #f0f6ff;
-  --lightest-slate: #e2e8f0;
-  --light-slate: #b0c4de;
-  --slate: #849bb8;
+  --lightest-slate: #e6eef8;
+  --light-slate: #b8cde6;
+  --slate: #8aa6c7;
 
-  /* Glossy Silver & Warm Bronze Accents */
+  /* Glossy Silver & Bronze Accents */
   --silver: #e2e8f0;
   --silver-bright: #ffffff;
-  --silver-glow: rgba(226, 232, 240, 0.85);
+  --silver-glow: rgba(242, 246, 251, 0.85);
   --bronze: #cf8844;
   --bronze-light: #e5a463;
-  --bronze-muted: rgba(207, 136, 68, 0.28);
 
   --font-mono: 'SF Mono', 'Fira Code', 'Courier New', monospace;
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -31,7 +29,25 @@
 }
 
 body {
-  background-color: var(--camo-obsidian);
+  background-color: var(--camo-black);
+  /* Layered Camo Vibe: Blends the exact Black-Navy, Royal Blue, Sky Blue & White tones */
+  background-image: 
+    linear-gradient(125deg, 
+      rgba(8, 14, 26, 0.92) 0%, 
+      rgba(26, 67, 128, 0.65) 28%, 
+      rgba(8, 14, 26, 0.95) 52%, 
+      rgba(124, 169, 214, 0.25) 74%, 
+      rgba(16, 42, 82, 0.85) 100%
+    ),
+    linear-gradient(45deg, 
+      var(--camo-black) 10%, 
+      var(--camo-royal-dark) 35%, 
+      var(--camo-royal) 50%, 
+      rgba(124, 169, 214, 0.35) 65%, 
+      var(--camo-black) 90%
+    );
+  background-attachment: fixed;
+  background-size: cover;
   color: var(--light-slate);
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -42,7 +58,7 @@ body {
 
 /* Typography & Links */
 a {
-  color: var(--silver);
+  color: var(--camo-white);
   text-decoration: none;
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
@@ -53,11 +69,11 @@ a:hover {
 }
 
 .accent-text {
-  color: var(--bronze-light);
+  color: var(--camo-sky);
 }
 
 .section-title {
-  color: var(--white);
+  color: var(--camo-white);
   font-size: 1.75rem;
   margin-bottom: 2rem;
   font-family: var(--font-mono);
@@ -69,9 +85,9 @@ a:hover {
 .section-title::after {
   content: "";
   display: block;
-  height: 1px;
+  height: 2px;
   width: 180px;
-  background: linear-gradient(90deg, var(--bronze), transparent);
+  background: linear-gradient(90deg, var(--camo-sky), var(--camo-royal), transparent);
 }
 
 /* Navigation Bar */
@@ -105,7 +121,7 @@ a:hover {
 .nav-toggle span {
   width: 100%;
   height: 2px;
-  background-color: var(--silver);
+  background-color: var(--camo-sky);
   box-shadow: 0 0 6px var(--silver-glow);
 }
 
@@ -115,13 +131,14 @@ a:hover {
   position: absolute;
   top: 70px;
   right: 0;
-  background-color: var(--camo-navy);
-  border: 1px solid var(--bronze-muted);
+  background-color: rgba(16, 42, 82, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(124, 169, 214, 0.35);
   padding: 1.5rem;
   border-radius: 6px;
   gap: 1rem;
   width: 220px;
-  box-shadow: 0 10px 30px -15px rgba(2, 8, 20, 0.9);
+  box-shadow: 0 12px 30px -10px rgba(8, 14, 26, 0.9);
   z-index: 10;
 }
 
@@ -130,14 +147,14 @@ a:hover {
 }
 
 .nav-menu a {
-  color: var(--lightest-slate);
+  color: var(--camo-white);
   font-family: var(--font-mono);
   font-size: 0.95rem;
 }
 
 .nav-menu a:hover {
-  color: var(--bronze-light);
-  text-shadow: 0 0 8px rgba(229, 164, 99, 0.5);
+  color: var(--camo-sky);
+  text-shadow: 0 0 8px rgba(124, 169, 214, 0.6);
 }
 
 /* Hero Section */
@@ -159,11 +176,11 @@ a:hover {
 
 /* Glossy Glowing Silver Typewriter Text */
 #typewriter-text {
-  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 45%, #94a3b8 75%, #f8fafc 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 45%, #94a3b8 75%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 12px rgba(226, 232, 240, 0.45))
-          drop-shadow(0 0 28px rgba(104, 162, 216, 0.35));
+  filter: drop-shadow(0 0 12px rgba(242, 246, 251, 0.5))
+          drop-shadow(0 0 28px rgba(124, 169, 214, 0.4));
 }
 
 /* Glossy Glowing Silver Cursor */
@@ -180,7 +197,7 @@ a:hover {
     text-shadow: 
       0 0 8px #ffffff,
       0 0 16px var(--silver-glow),
-      0 0 28px rgba(184, 216, 248, 0.75); 
+      0 0 28px var(--camo-sky); 
   }
   50% { 
     opacity: 0; 
@@ -197,14 +214,14 @@ a:hover {
 
 /* Minimal Links */
 .minimal-link {
-  color: var(--silver-bright);
+  color: var(--camo-white);
   font-family: var(--font-mono);
   font-size: 1rem;
   margin-top: 1rem;
   display: inline-block;
   position: relative;
   padding-bottom: 4px;
-  text-shadow: 0 0 8px rgba(226, 232, 240, 0.4);
+  text-shadow: 0 0 8px rgba(242, 246, 251, 0.35);
 }
 
 .minimal-link::after {
@@ -214,7 +231,7 @@ a:hover {
   height: 2px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(90deg, var(--silver-bright), var(--bronze-light));
+  background: linear-gradient(90deg, var(--camo-white), var(--camo-sky), var(--bronze-light));
   box-shadow: 0 0 8px var(--silver-glow);
   transform: scaleX(0);
   transform-origin: bottom right;
@@ -240,15 +257,15 @@ a:hover {
   list-style: none;
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  color: var(--lightest-slate);
+  color: var(--camo-white);
 }
 
 .tech-list li::before {
   content: "▷ ";
-  color: var(--bronze-light);
+  color: var(--camo-sky);
 }
 
-/* Experience & Project Cards */
+/* Experience & Project Cards (Camo-Tinted Glassmorphism) */
 .tab-container {
   display: flex;
   flex-direction: column;
@@ -276,9 +293,9 @@ a:hover {
 }
 
 .tab-btn.active {
-  color: var(--silver-bright);
-  border-bottom-color: var(--bronze);
-  background-color: var(--camo-navy);
+  color: var(--camo-white);
+  border-bottom-color: var(--camo-sky);
+  background-color: rgba(26, 67, 128, 0.4);
   text-shadow: 0 0 8px var(--silver-glow);
 }
 
@@ -288,16 +305,17 @@ a:hover {
 
 .tab-panel.active {
   display: block;
-  background-color: var(--camo-navy);
-  border: 1px solid rgba(104, 162, 216, 0.16);
-  border-left: 3px solid var(--bronze);
+  background: linear-gradient(145deg, rgba(16, 42, 82, 0.65) 0%, rgba(8, 14, 26, 0.78) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 169, 214, 0.28);
+  border-left: 3px solid var(--camo-sky);
   border-radius: 8px;
   padding: 1.75rem;
-  box-shadow: 0 12px 30px -15px rgba(2, 8, 20, 0.8);
+  box-shadow: 0 14px 34px -15px rgba(4, 8, 16, 0.85);
 }
 
 .tab-panel h3 {
-  color: var(--white);
+  color: var(--camo-white);
   font-size: 1.25rem;
   font-weight: 600;
 }
@@ -320,7 +338,7 @@ a:hover {
 .tab-panel .duration {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  color: var(--bronze-light);
+  color: var(--camo-sky);
   margin: 0.4rem 0 1rem 0;
 }
 
@@ -339,7 +357,7 @@ a:hover {
   content: "▷";
   position: absolute;
   left: 0;
-  color: var(--bronze-light);
+  color: var(--camo-sky);
 }
 
 /* Desktop View Layout */
@@ -353,6 +371,7 @@ a:hover {
     position: static;
     flex-direction: row;
     background: transparent;
+    backdrop-filter: none;
     border: none;
     box-shadow: none;
     padding: 0;
@@ -380,6 +399,6 @@ a:hover {
 
   .tab-btn.active {
     border-bottom-color: transparent;
-    border-left-color: var(--bronze);
+    border-left-color: var(--camo-sky);
   }
 }
