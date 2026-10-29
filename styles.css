@@ -1,24 +1,24 @@
 :root {
-  /* High-Contrast Oceanic Camo Palette */
-  --camo-obsidian: #050b14;      /* Deep black-navy camo patch */
-  --camo-navy: #0a1931;          /* Dark midnight blue */
-  --camo-royal: #184e9e;         /* Vibrant oceanic royal blue base */
-  --camo-sky: #6cb4ee;           /* Bright sky blue camo patch */
-  --camo-white: #eef6ff;         /* Crisp white camo highlight */
+  /* Oceanic Blue Camo Base Palette */
+  --camo-obsidian: #060d18;      /* Deepest black-navy patch */
+  --camo-navy: #0b1d3a;          /* Dark midnight blue */
+  --camo-royal: #153c78;         /* Rich oceanic mid-blue */
+  --camo-sky: #68a2d8;           /* Sky blue camo accent */
+  --camo-ice: #b8d8f8;           /* Light ice-blue tint */
 
   /* Typography & Metallic Accents */
-  --white: #f8fafc;
+  --white: #f0f6ff;
   --lightest-slate: #e2e8f0;
-  --light-slate: #cbd5e1;
-  --slate: #94a3b8;
+  --light-slate: #b0c4de;
+  --slate: #849bb8;
 
   /* Glossy Silver & Warm Bronze */
   --silver: #e2e8f0;
   --silver-bright: #ffffff;
-  --silver-glow: rgba(241, 245, 249, 0.9);
-  --bronze: #d4883a;
-  --bronze-light: #eba052;
-  --bronze-border: rgba(212, 136, 58, 0.45);
+  --silver-glow: rgba(226, 232, 240, 0.85);
+  --bronze: #cf8844;
+  --bronze-light: #e5a463;
+  --bronze-muted: rgba(207, 136, 68, 0.28);
 
   --font-mono: 'SF Mono', 'Fira Code', 'Courier New', monospace;
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -31,30 +31,30 @@
 }
 
 body {
-  background-color: #16468f;
-  /* Authentic Tactical Woodland Camo + Coder PCB/Binary/Syntax Overlay */
+  background-color: var(--camo-obsidian);
+  /* Seamless Oceanic Camo + Subtle Bronze/Silver Circuit SVG Pattern (No KWT/BD motifs) */
   background-image: 
-    linear-gradient(180deg, rgba(5, 11, 20, 0.38) 0%, rgba(10, 25, 49, 0.48) 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Cdefs%3E%3Cfilter id='camo' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.016 0.022' numOctaves='4' seed='11' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='52' xChannelSelector='R' yChannelSelector='G'/%3E%3C/filter%3E%3C/defs%3E%3C!-- Royal Blue Camo Base --%3E%3Crect width='480' height='480' fill='%2316468f'/%3E%3C!-- Fractal-Warped Tactical Woodland Camo Layer --%3E%3Cg filter='url(%23camo)'%3E%3C!-- Deep Midnight Navy Patches --%3E%3Cpath d='M-40 20h140l30 45-40 40h-90l-40-35zM220-20h160l40 50-50 45H250l-30-45zM80 180h170l35 55-60 40H95l-45-45zM310 240h180l30 60-70 45H320l-40-50zM-20 360h150l45 50-55 50H-10z' fill='%230a1e40'/%3E%3C!-- Sky Blue Camo Patches --%3E%3Cpath d='M110 50h110l25 35-35 30H120l-30-30zM340 80h120l20 40-40 30H350l-25-35zM20 240h100l30 35-35 30H30l-25-30zM230 330h120l30 40-45 30H240l-25-35zM140 420h100l25 35-35 25H135z' fill='%236cb4ee' fill-opacity='0.88'/%3E%3C!-- Crisp White Camo Highlights --%3E%3Cpath d='M150 40h55l12 18-18 14h-45zM380 115h50l10 16-15 12h-45zM60 230h45l12 15-15 12H55zM275 320h55l12 16-18 14h-45z' fill='%23eef6ff' fill-opacity='0.92'/%3E%3C!-- Obsidian Black-Navy Tactical Camo Shapes --%3E%3Cpath d='M-20 70h150l40 30-25 45H30l-50-30zM240 30h145l35 40-30 50H265l-45-40zM130 140h160l45 35-30 50H160l-50-40zM350 180h140l30 45-40 40H360l-35-40zM10 300h165l40 35-30 50H35l-45-40zM210 380h175l35 45-40 45H230l-40-45z' fill='%23050b14'/%3E%3C/g%3E%3C!-- Coder Layer: Bronze & Glossy Silver PCB Circuits --%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Bronze Motherboard Traces --%3E%3Cpath d='M25 85h45l20 20h55M35 97h30l20 20h40M265 55h50l25 25h45M275 67h35l25 25h30M155 175h55l20-20h45M35 335h60l22 22h50M45 347h45l22 22h35M245 415h55l20-20h50' stroke='%23eba052' stroke-width='1.6' stroke-opacity='0.78'/%3E%3C!-- Glossy Silver Circuit Traces --%3E%3Cpath d='M365 205h45l18 18h35M375 217h30l18 18h25M140 270h40l18-18h40M285 350h40l15-15h35' stroke='%23ffffff' stroke-width='1.4' stroke-opacity='0.8'/%3E%3C!-- Microprocessor IC Chip Outlines --%3E%3Crect x='190' y='155' width='22' height='22' rx='2' stroke='%23eba052' stroke-width='1.4' stroke-opacity='0.75'/%3E%3Crect x='195' y='160' width='12' height='12' fill='%23eba052' fill-opacity='0.35'/%3E%3Crect x='330' y='395' width='20' height='20' rx='2' stroke='%23ffffff' stroke-width='1.3' stroke-opacity='0.75'/%3E%3C/g%3E%3C!-- Circuit Solder Nodes --%3E%3Cg fill='%23eba052' fill-opacity='0.85'%3E%3Ccircle cx='145' cy='105' r='3'/%3E%3Ccircle cx='125' cy='117' r='2.5'/%3E%3Ccircle cx='385' cy='80' r='3'/%3E%3Ccircle cx='360' cy='92' r='2.5'/%3E%3Ccircle cx='275' cy='155' r='3'/%3E%3Ccircle cx='167' cy='357' r='3'/%3E%3Ccircle cx='370' cy='395' r='3'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.9'%3E%3Ccircle cx='463' cy='223' r='3'/%3E%3Ccircle cx='448' cy='235' r='2.5'/%3E%3Ccircle cx='238' cy='252' r='3'/%3E%3Ccircle cx='375' cy='335' r='3'/%3E%3C/g%3E%3C!-- Coder Layer: Binary Matrices & Dev Syntax --%3E%3Cg font-family='monospace' font-weight='bold' font-size='10' letter-spacing='1.5'%3E%3Ctext x='275' y='45' fill='%236cb4ee' fill-opacity='0.55'%3E01001101%3C/text%3E%3Ctext x='275' y='57' fill='%236cb4ee' fill-opacity='0.55'%3E10110100%3C/text%3E%3Ctext x='275' y='69' fill='%23eba052' fill-opacity='0.65'%3E00111001%3C/text%3E%3Ctext x='155' y='195' fill='%236cb4ee' fill-opacity='0.55'%3E11010010%3C/text%3E%3Ctext x='155' y='207' fill='%23ffffff' fill-opacity='0.6'%3E01011100%3C/text%3E%3Ctext x='45' y='325' fill='%236cb4ee' fill-opacity='0.55'%3E01100101%3C/text%3E%3Ctext x='45' y='337' fill='%23eba052' fill-opacity='0.65'%3E10011011%3C/text%3E%3Ctext x='385' y='198' fill='%23eba052' fill-opacity='0.7' font-size='13'%3E%26lt;/%26gt;%3C/text%3E%3Ctext x='55' y='125' fill='%23ffffff' fill-opacity='0.65' font-size='13'%3E%7B %7D%3C/text%3E%3Ctext x='255' y='442' fill='%236cb4ee' fill-opacity='0.65' font-size='12'%3E=%26gt; 0x1A%3C/text%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover, 480px 480px;
+    radial-gradient(circle at 15% 25%, rgba(21, 60, 120, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(104, 162, 216, 0.18) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill-rule='evenodd'%3E%3C!-- Deep Royal Camo Shapes --%3E%3Cpath d='M40 20c35-10 75 15 90 45s-20 65-55 75-70-15-65-55 5-55 30-65zm210 110c45-15 85 10 95 50s-25 80-70 85-80-25-70-65 0-55 45-70zM70 260c40-20 95 5 110 40s-15 75-60 80-95-20-85-65 5-35 35-55z' fill='%230b1d3a' fill-opacity='0.65'/%3E%3C!-- Oceanic Blue Shapes --%3E%3Cpath d='M160 40c25-15 65 0 75 30s-15 55-45 60-60-15-50-45 0-30 20-45zm-90 130c30-10 60 15 65 40s-20 50-50 50-55-20-45-45 0-35 30-45zm220 140c25-10 55 10 60 35s-15 45-45 45-50-15-40-40 0-30 25-40z' fill='%23153c78' fill-opacity='0.38'/%3E%3C!-- Sky Blue Camo Highlights --%3E%3Cpath d='M195 75c15-8 35 5 40 20s-10 30-28 30-32-10-25-28 0-14 13-22zM95 200c18-6 38 8 40 24s-12 28-30 28-32-12-26-28 2-18 16-24z' fill='%2368a2d8' fill-opacity='0.14'/%3E%3C!-- Bronze Circuit Traces --%3E%3Cpath d='M20 90h35l15 15h30m-80 10h25l15 15h20M280 50h40l20-20h30M240 280h35l20 20h45m-100 12h25l15 15h35' stroke='%23cf8844' stroke-width='1.2' stroke-opacity='0.22' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='100' cy='105' r='2.5' fill='%23cf8844' fill-opacity='0.3'/%3E%3Ccircle cx='370' cy='30' r='2.5' fill='%23cf8844' fill-opacity='0.3'/%3E%3Ccircle cx='340' cy='300' r='2.5' fill='%23cf8844' fill-opacity='0.3'/%3E%3C!-- Glossy Silver Circuit Nodes --%3E%3Cpath d='M150 210h30l12-12h25M50 350h40l15-15h25' stroke='%23e2e8f0' stroke-width='1' stroke-opacity='0.18' fill='none'/%3E%3Ccircle cx='217' cy='198' r='2' fill='%23e2e8f0' fill-opacity='0.25'/%3E%3Ccircle cx='130' cy='335' r='2' fill='%23e2e8f0' fill-opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   color: var(--light-slate);
   font-family: var(--font-sans);
   line-height: 1.6;
-  padding: 0 1.5rem 3rem 1.5rem;
+  padding: 0 1.5rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
 /* Typography & Links */
 a {
-  color: var(--silver-bright);
+  color: var(--silver);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 a:hover {
-  color: var(--bronze-light);
+  color: var(--silver-bright);
   text-shadow: 0 0 10px var(--silver-glow);
 }
 
@@ -65,9 +65,8 @@ a:hover {
 .section-title {
   color: var(--white);
   font-size: 1.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-family: var(--font-mono);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -76,9 +75,9 @@ a:hover {
 .section-title::after {
   content: "";
   display: block;
-  height: 2px;
-  width: 160px;
-  background: linear-gradient(90deg, var(--bronze-light), var(--silver-bright), transparent);
+  height: 1px;
+  width: 180px;
+  background: linear-gradient(90deg, var(--bronze), transparent);
 }
 
 /* Navigation Bar */
@@ -86,12 +85,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 1.5rem;
-  margin-top: 1rem;
-  background: rgba(5, 11, 20, 0.82);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--bronze-border);
-  border-radius: 10px;
+  padding: 2rem 0;
   position: relative;
 }
 
@@ -117,7 +111,7 @@ a:hover {
 .nav-toggle span {
   width: 100%;
   height: 2px;
-  background-color: var(--silver-bright);
+  background-color: var(--silver);
   box-shadow: 0 0 6px var(--silver-glow);
 }
 
@@ -125,15 +119,16 @@ a:hover {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 68px;
+  top: 70px;
   right: 0;
-  background-color: rgba(5, 11, 20, 0.96);
-  border: 1px solid var(--bronze-light);
+  background-color: rgba(11, 29, 58, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--bronze-muted);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 6px;
   gap: 1rem;
   width: 220px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 10px 30px -15px rgba(2, 8, 20, 0.9);
   z-index: 10;
 }
 
@@ -142,57 +137,48 @@ a:hover {
 }
 
 .nav-menu a {
-  color: var(--white);
+  color: var(--lightest-slate);
   font-family: var(--font-mono);
   font-size: 0.95rem;
 }
 
 .nav-menu a:hover {
   color: var(--bronze-light);
+  text-shadow: 0 0 8px rgba(229, 164, 99, 0.5);
 }
 
 /* Hero Section */
 .hero {
-  min-height: 55vh;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 2rem 0;
-  padding: 2.5rem;
-  background: rgba(5, 11, 20, 0.78);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(108, 180, 238, 0.3);
-  border-left: 4px solid var(--silver-bright);
-  border-radius: 12px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
 }
 
 .hero .greeting {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  font-size: 3.6rem;
+  font-size: 4.2rem;
   font-weight: bold;
-  min-height: 60px;
+  min-height: 50px;
 }
 
 /* Glossy Glowing Silver Typewriter Text */
 #typewriter-text {
-  color: #ffffff;
-  text-shadow: 
-    0 0 6px #ffffff,
-    0 0 14px rgba(226, 232, 240, 0.95),
-    0 0 28px rgba(148, 163, 184, 0.8),
-    0 2px 4px rgba(0, 0, 0, 0.9);
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 45%, #94a3b8 75%, #f8fafc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 12px rgba(226, 232, 240, 0.45))
+          drop-shadow(0 0 28px rgba(104, 162, 216, 0.35));
 }
 
 /* Glossy Glowing Silver Cursor */
 .beaming-cursor {
-  color: #ffffff;
+  color: var(--silver-bright);
   font-family: var(--font-mono);
   margin-left: 6px;
-  animation: beam 1s infinite;
+  animation: beam 1.2s infinite;
 }
 
 @keyframes beam {
@@ -200,8 +186,8 @@ a:hover {
     opacity: 1; 
     text-shadow: 
       0 0 8px #ffffff,
-      0 0 18px rgba(226, 232, 240, 1),
-      0 0 32px rgba(108, 180, 238, 0.9); 
+      0 0 16px var(--silver-glow),
+      0 0 28px rgba(184, 216, 248, 0.75); 
   }
   50% { 
     opacity: 0; 
@@ -210,22 +196,22 @@ a:hover {
 }
 
 .hero .tagline {
-  margin: 1rem 0 1.5rem 0;
+  margin: 1.2rem 0 2rem 0;
   max-width: 520px;
   color: var(--camo-sky);
-  font-size: 1.85rem;
-  font-weight: 500;
+  font-size: 2.05rem;
 }
 
 /* Minimal Links */
 .minimal-link {
-  color: var(--bronze-light);
+  color: var(--silver-bright);
   font-family: var(--font-mono);
-  font-size: 1.05rem;
-  margin-top: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
   display: inline-block;
   position: relative;
   padding-bottom: 4px;
+  text-shadow: 0 0 8px rgba(226, 232, 240, 0.4);
 }
 
 .minimal-link::after {
@@ -249,18 +235,7 @@ a:hover {
 
 /* General Sections */
 .section {
-  padding: 2rem 0;
-}
-
-.about-content,
-.tab-panel.active {
-  background: rgba(5, 11, 20, 0.82);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(108, 180, 238, 0.28);
-  border-left: 4px solid var(--bronze-light);
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+  padding: 3.5rem 0;
 }
 
 /* About Tech List */
@@ -272,7 +247,7 @@ a:hover {
   list-style: none;
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  color: var(--white);
+  color: var(--lightest-slate);
 }
 
 .tech-list li::before {
@@ -281,12 +256,52 @@ a:hover {
 }
 
 /* Experience & Project Cards */
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tab-header {
+  display: flex;
+  border-bottom: 2px solid var(--camo-royal);
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  color: var(--silver-bright);
+  border-bottom-color: var(--bronze);
+  background-color: rgba(21, 60, 120, 0.35);
+  text-shadow: 0 0 8px var(--silver-glow);
+}
+
 .tab-panel {
   display: none;
 }
 
 .tab-panel.active {
   display: block;
+  background: rgba(11, 29, 58, 0.55);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(104, 162, 216, 0.18);
+  border-left: 3px solid var(--bronze);
+  border-radius: 8px;
+  padding: 1.75rem;
+  box-shadow: 0 12px 30px -15px rgba(2, 8, 20, 0.8);
 }
 
 .tab-panel h3 {
@@ -346,10 +361,34 @@ a:hover {
     position: static;
     flex-direction: row;
     background: transparent;
+    backdrop-filter: none;
     border: none;
     box-shadow: none;
     padding: 0;
     width: auto;
     gap: 2rem;
+  }
+
+  .tab-container {
+    flex-direction: row;
+  }
+
+  .tab-header {
+    flex-direction: column;
+    border-bottom: none;
+    border-left: 2px solid var(--camo-royal);
+  }
+
+  .tab-btn {
+    border-bottom: none;
+    border-left: 2px solid transparent;
+    margin-bottom: 0;
+    margin-left: -2px;
+    text-align: left;
+  }
+
+  .tab-btn.active {
+    border-bottom-color: transparent;
+    border-left-color: var(--bronze);
   }
 }
