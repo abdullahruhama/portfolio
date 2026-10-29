@@ -1,24 +1,24 @@
 :root {
-  /* High-Contrast Oceanic Camo Palette */
-  --camo-obsidian: #050b14;      /* Deep black-navy camo patch */
-  --camo-navy: #0a1931;          /* Dark midnight blue */
-  --camo-royal: #184e9e;         /* Vibrant oceanic royal blue base */
-  --camo-sky: #6cb4ee;           /* Bright sky blue camo patch */
-  --camo-white: #eef6ff;         /* Crisp white camo highlight */
+  /* Oceanic Blue Camo Base Palette */
+  --camo-obsidian: #060d18;      /* Deepest black-navy patch */
+  --camo-navy: #0b1d3a;          /* Dark midnight blue */
+  --camo-royal: #153c78;         /* Rich oceanic mid-blue */
+  --camo-sky: #68a2d8;           /* Sky blue camo accent */
+  --camo-ice: #b8d8f8;           /* Light ice-blue tint */
 
   /* Typography & Metallic Accents */
-  --white: #f8fafc;
+  --white: #f0f6ff;
   --lightest-slate: #e2e8f0;
-  --light-slate: #cbd5e1;
-  --slate: #94a3b8;
+  --light-slate: #b0c4de;
+  --slate: #849bb8;
 
   /* Glossy Silver & Warm Bronze */
   --silver: #e2e8f0;
   --silver-bright: #ffffff;
-  --silver-glow: rgba(241, 245, 249, 0.9);
-  --bronze: #d4883a;
-  --bronze-light: #eba052;
-  --bronze-border: rgba(212, 136, 58, 0.45);
+  --silver-glow: rgba(226, 232, 240, 0.85);
+  --bronze: #cf8844;
+  --bronze-light: #e5a463;
+  --bronze-muted: rgba(207, 136, 68, 0.28);
 
   --font-mono: 'SF Mono', 'Fira Code', 'Courier New', monospace;
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -31,30 +31,30 @@
 }
 
 body {
-  background-color: var(--camo-royal);
-  /* High-Contrast Oceanic Camo + Bronze & Silver Circuits (No KWT/BD symbols) */
+  background-color: var(--camo-obsidian);
+  /* Seamless Oceanic Camo + Subtle Bronze/Silver Circuit SVG Pattern (No KWT/BD motifs) */
   background-image: 
-    linear-gradient(180deg, rgba(5, 11, 20, 0.45) 0%, rgba(10, 25, 49, 0.55) 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360'%3E%3Crect width='360' height='360' fill='%2316468f'/%3E%3Cpath d='M0 40c45-15 85 10 105 45s-10 80-55 90-80-20-50-75zm190-20c50-20 110 15 125 60s-20 95-75 105-100-25-90-75 5-55 40-90zM60 220c55-25 115 5 130 55s-25 90-80 95-105-30-90-80 5-45 40-70zm210 70c35-15 80 10 90 45s-20 65-60 65-75-25-60-60 5-35 30-50z' fill='%23050c18'/%3E%3Cpath d='M110 90c35-12 75 8 85 38s-18 62-55 65-70-18-58-52 2-38 28-51zM20 160c30-10 65 12 70 42s-22 52-52 52-58-22-48-48 5-35 30-46zm220 40c38-14 78 8 85 40s-20 60-58 62-68-20-56-52 4-36 29-50zM150 300c30-10 65 8 72 32s-15 48-48 48-55-18-45-42 4-28 21-38z' fill='%236cb4ee' fill-opacity='0.85'/%3E%3Cpath d='M145 75c18-6 38 5 42 20s-10 28-28 28-32-10-25-26 2-16 11-22zM55 205c15-5 32 6 35 18s-8 24-24 24-28-8-22-22 2-14 11-20zm215 15c18-6 36 5 40 18s-10 26-26 26-30-10-24-24 2-14 10-20z' fill='%23eef6ff' fill-opacity='0.9'/%3E%3Cpath d='M18 65h35l15 15h30M25 82h22l12 12h25M215 55h45l18-18h32M225 70h35l15-15h25M85 265h40l18 18h35M95 282h28l14 14h30' stroke='%23eba052' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='98' cy='80' r='3' fill='%23eba052'/%3E%3Ccircle cx='310' cy='37' r='3' fill='%23eba052'/%3E%3Ccircle cx='178' cy='283' r='3' fill='%23eba052'/%3E%3Cpath d='M235 95h32l14 14h28M275 315h35l12-12h25M40 110h28l12-12h22' stroke='%23ffffff' stroke-width='1.5' stroke-opacity='0.85' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='309' cy='109' r='2.5' fill='%23ffffff'/%3E%3Ccircle cx='102' cy='98' r='2.5' fill='%23ffffff'/%3E%3C/svg%3E");
-  background-size: cover, 360px 360px;
+    radial-gradient(circle at 15% 25%, rgba(21, 60, 120, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(104, 162, 216, 0.18) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill-rule='evenodd'%3E%3C!-- Deep Royal Camo Shapes --%3E%3Cpath d='M40 20c35-10 75 15 90 45s-20 65-55 75-70-15-65-55 5-55 30-65zm210 110c45-15 85 10 95 50s-25 80-70 85-80-25-70-65 0-55 45-70zM70 260c40-20 95 5 110 40s-15 75-60 80-95-20-85-65 5-35 35-55z' fill='%230b1d3a' fill-opacity='0.65'/%3E%3C!-- Oceanic Blue Shapes --%3E%3Cpath d='M160 40c25-15 65 0 75 30s-15 55-45 60-60-15-50-45 0-30 20-45zm-90 130c30-10 60 15 65 40s-20 50-50 50-55-20-45-45 0-35 30-45zm220 140c25-10 55 10 60 35s-15 45-45 45-50-15-40-40 0-30 25-40z' fill='%23153c78' fill-opacity='0.38'/%3E%3C!-- Sky Blue Camo Highlights --%3E%3Cpath d='M195 75c15-8 35 5 40 20s-10 30-28 30-32-10-25-28 0-14 13-22zM95 200c18-6 38 8 40 24s-12 28-30 28-32-12-26-28 2-18 16-24z' fill='%2368a2d8' fill-opacity='0.14'/%3E%3C!-- Bronze Circuit Traces --%3E%3Cpath d='M20 90h35l15 15h30m-80 10h25l15 15h20M280 50h40l20-20h30M240 280h35l20 20h45m-100 12h25l15 15h35' stroke='%23cf8844' stroke-width='1.2' stroke-opacity='0.22' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='100' cy='105' r='2.5' fill='%23cf8844' fill-opacity='0.3'/%3E%3Ccircle cx='370' cy='30' r='2.5' fill='%23cf8844' fill-opacity='0.3'/%3E%3Ccircle cx='340' cy='300' r='2.5' fill='%23cf8844' fill-opacity='0.3'/%3E%3C!-- Glossy Silver Circuit Nodes --%3E%3Cpath d='M150 210h30l12-12h25M50 350h40l15-15h25' stroke='%23e2e8f0' stroke-width='1' stroke-opacity='0.18' fill='none'/%3E%3Ccircle cx='217' cy='198' r='2' fill='%23e2e8f0' fill-opacity='0.25'/%3E%3Ccircle cx='130' cy='335' r='2' fill='%23e2e8f0' fill-opacity='0.25'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: fixed;
   color: var(--light-slate);
   font-family: var(--font-sans);
   line-height: 1.6;
-  padding: 0 1.5rem 3rem 1.5rem;
+  padding: 0 1.5rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
 /* Typography & Links */
 a {
-  color: var(--silver-bright);
+  color: var(--silver);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 a:hover {
-  color: var(--bronze-light);
+  color: var(--silver-bright);
   text-shadow: 0 0 10px var(--silver-glow);
 }
 
@@ -65,9 +65,8 @@ a:hover {
 .section-title {
   color: var(--white);
   font-size: 1.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-family: var(--font-mono);
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -76,9 +75,9 @@ a:hover {
 .section-title::after {
   content: "";
   display: block;
-  height: 2px;
-  width: 160px;
-  background: linear-gradient(90deg, var(--bronze-light), var(--silver-bright), transparent);
+  height: 1px;
+  width: 180px;
+  background: linear-gradient(90deg, var(--bronze), transparent);
 }
 
 /* Navigation Bar */
@@ -86,12 +85,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 1.5rem;
-  margin-top: 1rem;
-  background: rgba(5, 11, 20, 0.82);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--bronze-border);
-  border-radius: 10px;
+  padding: 2rem 0;
   position: relative;
 }
 
@@ -117,7 +111,7 @@ a:hover {
 .nav-toggle span {
   width: 100%;
   height: 2px;
-  background-color: var(--silver-bright);
+  background-color: var(--silver);
   box-shadow: 0 0 6px var(--silver-glow);
 }
 
@@ -125,15 +119,16 @@ a:hover {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 68px;
+  top: 70px;
   right: 0;
-  background-color: rgba(5, 11, 20, 0.96);
-  border: 1px solid var(--bronze-light);
+  background-color: rgba(11, 29, 58, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--bronze-muted);
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 6px;
   gap: 1rem;
   width: 220px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 10px 30px -15px rgba(2, 8, 20, 0.9);
   z-index: 10;
 }
 
@@ -142,57 +137,48 @@ a:hover {
 }
 
 .nav-menu a {
-  color: var(--white);
+  color: var(--lightest-slate);
   font-family: var(--font-mono);
   font-size: 0.95rem;
 }
 
 .nav-menu a:hover {
   color: var(--bronze-light);
+  text-shadow: 0 0 8px rgba(229, 164, 99, 0.5);
 }
 
 /* Hero Section */
 .hero {
-  min-height: 55vh;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 2rem 0;
-  padding: 2.5rem;
-  background: rgba(5, 11, 20, 0.78);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(108, 180, 238, 0.3);
-  border-left: 4px solid var(--silver-bright);
-  border-radius: 12px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
 }
 
 .hero .greeting {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  font-size: 3.6rem;
+  font-size: 4.2rem;
   font-weight: bold;
-  min-height: 60px;
+  min-height: 50px;
 }
 
-/* Bulletproof Glossy Glowing Silver Typewriter Text */
+/* Glossy Glowing Silver Typewriter Text */
 #typewriter-text {
-  color: #ffffff;
-  text-shadow: 
-    0 0 6px #ffffff,
-    0 0 14px rgba(226, 232, 240, 0.95),
-    0 0 28px rgba(148, 163, 184, 0.8),
-    0 2px 4px rgba(0, 0, 0, 0.9);
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 45%, #94a3b8 75%, #f8fafc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 12px rgba(226, 232, 240, 0.45))
+          drop-shadow(0 0 28px rgba(104, 162, 216, 0.35));
 }
 
 /* Glossy Glowing Silver Cursor */
 .beaming-cursor {
-  color: #ffffff;
+  color: var(--silver-bright);
   font-family: var(--font-mono);
   margin-left: 6px;
-  animation: beam 1s infinite;
+  animation: beam 1.2s infinite;
 }
 
 @keyframes beam {
@@ -200,8 +186,8 @@ a:hover {
     opacity: 1; 
     text-shadow: 
       0 0 8px #ffffff,
-      0 0 18px rgba(226, 232, 240, 1),
-      0 0 32px rgba(108, 180, 238, 0.9); 
+      0 0 16px var(--silver-glow),
+      0 0 28px rgba(184, 216, 248, 0.75); 
   }
   50% { 
     opacity: 0; 
@@ -210,22 +196,22 @@ a:hover {
 }
 
 .hero .tagline {
-  margin: 1rem 0 1.5rem 0;
+  margin: 1.2rem 0 2rem 0;
   max-width: 520px;
   color: var(--camo-sky);
-  font-size: 1.85rem;
-  font-weight: 500;
+  font-size: 2.05rem;
 }
 
 /* Minimal Links */
 .minimal-link {
-  color: var(--bronze-light);
+  color: var(--silver-bright);
   font-family: var(--font-mono);
-  font-size: 1.05rem;
-  margin-top: 0.5rem;
+  font-size: 1rem;
+  margin-top: 1rem;
   display: inline-block;
   position: relative;
   padding-bottom: 4px;
+  text-shadow: 0 0 8px rgba(226, 232, 240, 0.4);
 }
 
 .minimal-link::after {
@@ -249,18 +235,7 @@ a:hover {
 
 /* General Sections */
 .section {
-  padding: 2rem 0;
-}
-
-.about-content,
-.tab-panel.active {
-  background: rgba(5, 11, 20, 0.82);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(108, 180, 238, 0.28);
-  border-left: 4px solid var(--bronze-light);
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.65);
+  padding: 3.5rem 0;
 }
 
 /* About Tech List */
@@ -272,7 +247,7 @@ a:hover {
   list-style: none;
   font-family: var(--font-mono);
   font-size: 0.9rem;
-  color: var(--white);
+  color: var(--lightest-slate);
 }
 
 .tech-list li::before {
@@ -281,12 +256,52 @@ a:hover {
 }
 
 /* Experience & Project Cards */
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tab-header {
+  display: flex;
+  border-bottom: 2px solid var(--camo-royal);
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  color: var(--silver-bright);
+  border-bottom-color: var(--bronze);
+  background-color: rgba(21, 60, 120, 0.35);
+  text-shadow: 0 0 8px var(--silver-glow);
+}
+
 .tab-panel {
   display: none;
 }
 
 .tab-panel.active {
   display: block;
+  background: rgba(11, 29, 58, 0.55);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(104, 162, 216, 0.18);
+  border-left: 3px solid var(--bronze);
+  border-radius: 8px;
+  padding: 1.75rem;
+  box-shadow: 0 12px 30px -15px rgba(2, 8, 20, 0.8);
 }
 
 .tab-panel h3 {
@@ -346,10 +361,34 @@ a:hover {
     position: static;
     flex-direction: row;
     background: transparent;
+    backdrop-filter: none;
     border: none;
     box-shadow: none;
     padding: 0;
     width: auto;
     gap: 2rem;
+  }
+
+  .tab-container {
+    flex-direction: row;
+  }
+
+  .tab-header {
+    flex-direction: column;
+    border-bottom: none;
+    border-left: 2px solid var(--camo-royal);
+  }
+
+  .tab-btn {
+    border-bottom: none;
+    border-left: 2px solid transparent;
+    margin-bottom: 0;
+    margin-left: -2px;
+    text-align: left;
+  }
+
+  .tab-btn.active {
+    border-bottom-color: transparent;
+    border-left-color: var(--bronze);
   }
 }
